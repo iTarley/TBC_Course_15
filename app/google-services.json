@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "932585831234",
+    "project_id": "tbc-course-15",
+    "storage_bucket": "tbc-course-15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932585831234:android:3f0dde582a5cd538d666db",
+        "android_client_info": {
+          "package_name": "com.example.tbc_course_15"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932585831234-s3hue196f0obgfermpn97bffij802htb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl4P1Bi6JBjuJD0TAvJwYmGFjZYuenlM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932585831234-s3hue196f0obgfermpn97bffij802htb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

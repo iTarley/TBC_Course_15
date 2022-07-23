@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    tools:context=".fragments.SecondFragment">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/heroImage"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/sample"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/heroHeader"
+        android:layout_width="360dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/hearthstone_font"
+        android:text="@string/textview"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heroImage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/heroDesc"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/textview"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heroHeader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
