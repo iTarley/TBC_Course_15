@@ -3,32 +3,17 @@ package com.example.tbc_course_15.fragments
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.RecyclerView
 import com.example.tbc_course_15.MainActivity
 import com.example.tbc_course_15.R
-import com.example.tbc_course_15.adapter.MyAdapter
+import com.example.tbc_course_15.adapter.MyListAdapter
 import com.example.tbc_course_15.databinding.FragmentFirstBinding
 import com.example.tbc_course_15.models.HeroList
 import com.example.tbc_course_15.models.Heroes
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.firestore.DocumentChange
-import com.google.firebase.firestore.EventListener
-import com.google.firebase.firestore.FirebaseFirestoreException
-import com.google.firebase.firestore.QuerySnapshot
-import com.google.firebase.firestore.auth.User
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 
 
 class FirstFragment : Fragment() {
@@ -37,7 +22,8 @@ class FirstFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val adapter by lazy{
-        MyAdapter(HeroList.heroList)
+//        MyAdapter(HeroList.heroList)
+        MyListAdapter()
     }
 
 
@@ -75,8 +61,10 @@ class FirstFragment : Fragment() {
 
             override fun afterTextChanged(p0: Editable?) {
                 filter(p0.toString())
+
             }
         })
+
     }
 
 
@@ -96,6 +84,7 @@ class FirstFragment : Fragment() {
 
     private fun showHeroes() {
         binding.heroRecycler.adapter = adapter
+        adapter.submitList(HeroList.heroList)
         adapter.onClick = {
             findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(
                 it.src, it.header,it.description
