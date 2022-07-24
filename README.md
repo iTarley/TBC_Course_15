@@ -18,6 +18,9 @@ ex. Luka Nikuradze - luka.nikuradze.1@btu.edu.ge
 
 ## Version History
 
+* 1.1 (24.07.2022)
+    * Adapter -> ListAdapter
+
 * 1.0 (23.07.2022)
     * Initial Release
 
