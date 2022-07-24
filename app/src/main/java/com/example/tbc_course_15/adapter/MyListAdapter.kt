@@ -14,7 +14,6 @@ typealias onClick = (hero: Heroes) -> Unit
 
 class MyListAdapter:ListAdapter<Heroes, MyListAdapter.ViewHolder>(DiffCallBack()){
 
-
     lateinit var onClick: onClick
 
 

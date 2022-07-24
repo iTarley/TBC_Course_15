@@ -22,7 +22,6 @@ class FirstFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val adapter by lazy{
-//        MyAdapter(HeroList.heroList)
         MyListAdapter()
     }
 
@@ -43,6 +42,7 @@ class FirstFragment : Fragment() {
         (activity as MainActivity).supportActionBar?.title = getString(R.string.champions)
         showHeroes()
         filterInit()
+        navigate()
 
     }
 
@@ -85,6 +85,10 @@ class FirstFragment : Fragment() {
     private fun showHeroes() {
         binding.heroRecycler.adapter = adapter
         adapter.submitList(HeroList.heroList)
+
+    }
+
+    private fun navigate(){
         adapter.onClick = {
             findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(
                 it.src, it.header,it.description
